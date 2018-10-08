@@ -1,0 +1,33 @@
+html{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 微软雅黑;
+  background: #f0f0f0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin:0;
+}
+
+#app{
+  height: 100%;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* 按钮包裹盒子(按钮居中) */
+.button-center{
+  text-align: center;
+}
+
+.el-menu{
+  border:none;
+}
