@@ -31,3 +31,14 @@ a{
 .el-menu{
   border:none;
 }
+
+/* 输入框长度 */
+.mini-input {
+  width: 100px;
+}
+.minier-input {
+  width: 150px;
+}
+.medium-input {
+  width: 200px;
+}

@@ -8,7 +8,8 @@ import 'babel-polyfill'
 import '../static/font/iconfont.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/styles/common/common.css' // global css
-import Axios from 'axios'
+// import Axios from 'axios'
+import Axios from './utils/request'
 
 // 引入组件
 import Vue from 'vue'

@@ -2,7 +2,7 @@
 import Mock from 'mockjs'
 
 // 定义要拦截的请求路径，并返回数据
-const data = Mock.mock('/api/login', {
+const data = Mock.mock('/webSocket/login', {
   name: '王京',
   sex: '男',
   age: 25

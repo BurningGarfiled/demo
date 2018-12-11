@@ -27,11 +27,8 @@
 </template>
 
 <script>
-import VNumber from '@/components/common/verificationCode'
-import '@/mock/login'
 export default {
   name: 'HelloWorld',
-  components: {VNumber},
   data () {
     const validateUserName = (rule, value, callback) => {
       if (!value) {
@@ -56,7 +53,7 @@ export default {
       passwordType: 'password', // 密码输入框类型
       passIcon: '&#xe617;', // 查看密码图标
       loginForm: {
-        userName: 'wangjing',
+        userName: '10001',
         pass: '123456',
         verification: ''
       },
@@ -94,14 +91,23 @@ export default {
     // 登录
     login () {
       let this_ = this
-      let url = '/api/login'
-      let param = this.form
-      this.$http.post(url, param).then(function (resp) {
-        if (resp.status === 200) {
-          this_.$router.push('/main')
+      let url = '/test/login'
+      let param = {
+        accountId: this.loginForm.userName,
+        password: this.loginForm.pass
+      }
+      this.$http.get(url, {params: param}).then(function (resp) {
+        if (resp.data.status === 200) {
+          this_.$router.push('/webSocket')
+          const userInfo = {
+            userName: resp.data.name,
+            userId: resp.data.uid,
+            accountId: param.accountId
+          }
+          const obj = JSON.stringify(userInfo)
+          localStorage.setItem('userInfo', obj)
         }
       })
-      // console.log(mockdata.data.foods)
     }
   }
 }

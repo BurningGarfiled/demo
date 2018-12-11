@@ -40,6 +40,11 @@ export default {
               path: 'PictureSlider'
             }
           ]
+        },
+        {
+          title: 'webSocket',
+          icon: '&#xe64c;',
+          path: '/webSocket'
         }
       ]
     }
@@ -54,7 +59,7 @@ export default {
  }
  .app-main{
    height:100%;
-   overflow:hidden;
+   overflow:auto;
  }
  .nav-content{
     width:200px;
@@ -63,4 +68,8 @@ export default {
     background:#0C142D;
     float:left;
   }
+ .app-main {
+   box-sizing: border-box;
+   padding: 10px;
+ }
 </style>
